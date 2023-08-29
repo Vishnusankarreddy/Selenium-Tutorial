@@ -19,13 +19,13 @@ public class loginpage1 {
 	    Actions creat =new Actions (driver);
 	    creat.moveToElement(driver.findElement(By.xpath("//a[text()='Create new account']"))).click().perform();
 	    WebElement Firstname = driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-']"));
-        Firstname.sendKeys("shiva");
+        Firstname.sendKeys("vishnu");
         WebElement Surname = driver.findElement(By.xpath("//input[@aria-label='Surname']"));
-        Surname.sendKeys("chennai");
+        Surname.sendKeys("softsuave");
         WebElement mobile = driver.findElement(By.xpath("//input[@aria-label='Mobile number or email address']"));
-        mobile.sendKeys("8987545687");
+        mobile.sendKeys("7032424667");
         WebElement password = driver.findElement(By.xpath("//input[@aria-label='New password']"));
-        password.sendKeys("shiva@123");
+        password.sendKeys("Vishnu@123");
         WebElement datedropdown = driver.findElement(By.xpath("//select[@id='day']"));
         Select date = new Select(datedropdown);
         date.selectByValue("5");
