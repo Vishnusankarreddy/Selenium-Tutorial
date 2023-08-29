@@ -46,7 +46,7 @@ public class Vishnuclass {
         Thread.sleep(2000);
         WebElement Date = driver.findElement(By.xpath("//input[@id='vfb-18']"));
         Date.sendKeys("18/09/2021");
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         WebElement HHdropdown = driver.findElement(By.xpath("//select[@id='vfb-16-hour']"));
         Select HH = new Select(HHdropdown);
         HH.selectByValue("11");
