@@ -12,7 +12,7 @@ public class loginpage {
 
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = new ChromeDriver();
-		
+	   //mouse moving action
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 	    Thread.sleep(2000);
 	    Actions action = new Actions(driver);

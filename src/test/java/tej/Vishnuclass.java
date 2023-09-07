@@ -1,5 +1,7 @@
 package tej;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,11 +12,11 @@ public class Vishnuclass {
 
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = new ChromeDriver();
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://nxtgenaiacademy.com/demo-site/");
         Thread.sleep(2000);
-        WebElement Firstname = driver.findElement(By.xpath("//input[@id='vfb-5']"));
-        Firstname.sendKeys("vinoth");
+        driver.findElement(By.xpath("//input[@id='vfb-5']"))
+        .sendKeys("ganesh");
         Thread.sleep(2000);
         WebElement Lastname = driver.findElement(By.xpath("//input[@id='vfb-7']"));
         Lastname.sendKeys("sankar");
@@ -29,14 +31,14 @@ public class Vishnuclass {
         Streetaddress.sendKeys("Ganesh street");
         Thread.sleep(2000);
         WebElement City = driver.findElement(By.xpath("//input[@id='vfb-13-city']"));
-        City.sendKeys("Chennai");
+        City.sendKeys("prestiage billa");
         Thread.sleep(2000);
         WebElement Zipcode = driver.findElement(By.xpath("//input[@id='vfb-13-zip']"));
-        Zipcode.sendKeys("5858");
+        Zipcode.sendKeys("chennai");
         Thread.sleep(2000);
         WebElement countrydropdown = driver.findElement(By.xpath("//select[@id='vfb-13-country']"));
         Select Country = new Select(countrydropdown);
-        Country.selectByIndex(8);
+        Country.selectByIndex(77);
         Thread.sleep(2000);
         WebElement State  = driver.findElement(By.xpath("//input[@id='vfb-13-state']"));
         State.sendKeys("Tamilnadu");
@@ -46,7 +48,7 @@ public class Vishnuclass {
         Thread.sleep(2000);
         WebElement Date = driver.findElement(By.xpath("//input[@id='vfb-18']"));
         Date.sendKeys("18/09/2021");
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         WebElement HHdropdown = driver.findElement(By.xpath("//select[@id='vfb-16-hour']"));
         Select HH = new Select(HHdropdown);
         HH.selectByValue("11");
@@ -70,6 +72,11 @@ public class Vishnuclass {
         WebElement Submit = driver.findElement(By.xpath("//input[@id='vfb-4']"));
         Submit.click();
     }
+
+	private static WebElement highlights(WebElement findElement) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 
 
